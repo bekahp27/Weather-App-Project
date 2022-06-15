@@ -1,6 +1,7 @@
 body {
   background: #f2f2f2;
   padding: 30px;
+  cursor: default;
 }
 .main {
   background: white;
@@ -120,4 +121,13 @@ img {
 
 #weatherDescription {
   text-transform: capitalize;
+}
+
+.active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+.active:hover {
+  text-decoration: none;
 }

@@ -30,6 +30,8 @@ function displayTemperature(response) {
   let dateElement = document.querySelector("#updateDate");
   let iconElement = document.querySelector("#icon");
 
+  celsiusTemp = response.data.main.temp;
+
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   weatherDescription.innerHTML = response.data.weather[0].description;
@@ -55,7 +57,32 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-search("Shaftesbury");
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#currentTemp");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#currentTemp");
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
+}
+
+let celsiusTemp = null;
 
 let form = document.querySelector("#cityForm");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+search("Shaftesbury");
