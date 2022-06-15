@@ -1,0 +1,119 @@
+body {
+  background: #f2f2f2;
+  padding: 30px;
+}
+.main {
+  background: white;
+  padding: 30px 30px 20px 30px;
+}
+.footer,
+.main {
+  max-width: 650px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+div {
+  padding: 0px;
+  margin: 0px;
+}
+p,
+h1,
+h2,
+h3 {
+  font-family: "Inconsolata", monospace;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 500;
+}
+h2 {
+  font-size: 22px;
+  font-weight: 400;
+}
+h3 {
+  font-size: 18px;
+  text-align: right;
+  font-weight: 400;
+  font-style: italic;
+}
+
+p {
+  font-size: 12px;
+  text-align: center;
+}
+
+a {
+  color: #51b2c3;
+}
+
+a:hover {
+  color: #000000;
+}
+
+.button {
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  background: #51b2c3;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: all 400ms ease-in-out;
+  width: 100%;
+}
+
+.button:hover {
+  background: #f2f2f2;
+  cursor: pointer;
+  color: #000000;
+}
+hr.solid {
+  border-top: 2px solid #51b2c3;
+}
+
+img {
+  width: 80px;
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+
+.mainweather {
+  width: 100px;
+}
+
+.coded {
+  max-width: 650px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.today {
+  margin-top: 20px;
+}
+
+.search {
+  background: white;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 20px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #51b2c3;
+}
+
+.vertical-align {
+  vertical-align: middle;
+  padding-top: 10px;
+}
+
+#currentCityHeader {
+  margin-top: 10px;
+}

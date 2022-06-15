@@ -10,16 +10,21 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
   <body>
-     <div class="container">
+    <div class="container">
       <div class="main">
-
         <form id="cityForm">
           <div class="row">
-            <div class="col-5">
+            <div class="col-9">
               <input
                 type="text"
                 class="form-control search"
@@ -36,19 +41,11 @@
                 Submit
               </button>
             </div>
-            <div class="col-4">
-              <button
-                type="button"
-                class="btn btn-link button"
-                id="currentLocation"
-              >
-                Current Location
-              </button>
-            </div>
           </div>
         </form>
-        <h1 id="currentCityHeader"><em>Bournemouth</em></h1>
-         <hr class="solid" />
+        <h1 id="currentCityHeader">Bournemouth</h1>
+        <p>Last Updated: <span id="currentDate">Wednesday 12:00</span></p>
+        <hr class="solid" />
         <div class="today">
           <div class="row">
             <div class="col-3">
@@ -60,33 +57,27 @@
             </div>
             <div class="col-5 vertical-align">
               <h2><span id="currentTemp">16</span>°C</h2>
-              <h2 id="currentDate">Wednesday 12:00</h2>
+              <h2>Partly cloudy</h2>
             </div>
-            <div class="col-4">
-              <h3>Partly cloudy</h3>
+            <div class="col-4 vertical-align">
               <h3>Humidity: <span id="precipitation"></span> %</h3>
               <h3>Wind: <span id="wind"></span> mph</h3>
             </div>
           </div>
         </div>
-        
-        </div>
-        <div class="coded">
-           <a href="https://github.com/bekahp27/Weather-App-Project" target="_blank"
-      >Code</a>
-    by Rebekah
-        </div>
+      </div>
+      <div class="footer">
+        <p class="coded">
+          <a
+            href="https://github.com/bekahp27/Weather-App-Project"
+            target="_blank"
+            >Coded</a
+          >
+          by Rebekah
+        </p>
       </div>
     </div>
 
-
-
-
-
-
-
-
-   
     <script src="src/index.js"></script>
   </body>
 </html>
