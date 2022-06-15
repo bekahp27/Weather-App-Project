@@ -22,7 +22,6 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
-  console.log(response.data);
   let temperatureElement = document.querySelector("#currentTemp");
   let cityElement = document.querySelector("#currentCityHeader");
   let weatherDescription = document.querySelector("#weatherDescription");
@@ -44,8 +43,19 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-let city = "Shaftesbury";
-let apiKey = "c8bcf38f16acb69ddfc1b3daa6ad1ae3";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+function search(city) {
+  let apiKey = "c8bcf38f16acb69ddfc1b3daa6ad1ae3";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
 
-axios.get(apiUrl).then(displayTemperature);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#cityInput");
+  search(cityInputElement.value);
+}
+
+search("Shaftesbury");
+
+let form = document.querySelector("#cityForm");
+form.addEventListener("submit", handleSubmit);
