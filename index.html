@@ -17,6 +17,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Weather App</title>
   </head>
   <body>
@@ -57,11 +58,11 @@
             </div>
             <div class="col-5 vertical-align">
               <h2><span id="currentTemp">16</span>°C</h2>
-              <h2>Partly cloudy</h2>
+              <h2><span id="weatherDescription">Partly cloudy</span></h2>
             </div>
             <div class="col-4 vertical-align">
-              <h3>Humidity: <span id="precipitation"></span> %</h3>
-              <h3>Wind: <span id="wind"></span> mph</h3>
+              <h3>Humidity: <span id="humidity"></span> %</h3>
+              <h3>Wind: <span id="wind"></span> Km/H</h3>
             </div>
           </div>
         </div>

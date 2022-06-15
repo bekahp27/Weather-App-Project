@@ -117,3 +117,7 @@ img {
 #currentCityHeader {
   margin-top: 10px;
 }
+
+#weatherDescription {
+  text-transform: capitalize;
+}
