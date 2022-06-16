@@ -21,6 +21,36 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForcast() {
+  let forcastElement = document.querySelector("#weather-forcast");
+
+  let forcastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forcastHTML =
+      forcastHTML +
+      `  
+      <div class="col-2">
+        <div class="weather-forcast-date">${day}</div>
+        <img
+          src="images/Partly Cloudy.png"
+          alt="Partly Cloudy"
+          class="forcast-icdon"
+          id="icon"
+          width="30px"
+        />
+        <div class="weather-forcast-temperatures">
+          <span class="weather-forcast-temperature-max"> 18° </span>
+          <span class="weather-forcast-temperature-min"> 10° </span>
+        </div>
+      </div>
+    `;
+  });
+
+  forcastHTML = forcastHTML + `</div>`;
+  forcastElement.innerHTML = forcastHTML;
+}
+
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#currentTemp");
   let cityElement = document.querySelector("#currentCityHeader");
@@ -86,3 +116,4 @@ let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Shaftesbury");
+displayForcast();
