@@ -52,6 +52,9 @@ a:hover {
   color: #000000;
 }
 
+.large-temp {
+  font-size: 26px;
+}
 .button {
   display: block;
   margin: 20px auto;
@@ -130,4 +133,25 @@ img {
 }
 .active:hover {
   text-decoration: none;
+}
+
+.forcast-icon {
+  width: 10px;
+}
+
+.weather-forcast {
+  text-align: center;
+}
+.weather-forcast-date {
+  color: #51b2c3;
+  font-size: 16px;
+}
+
+.weather-forcast-temperatures {
+  font-size: 13px;
+  color: #51b2c3;
+}
+
+.weather-forcast-temperature-min {
+  opacity: 0.6;
 }
